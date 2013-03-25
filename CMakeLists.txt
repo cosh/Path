@@ -1,21 +1,24 @@
-cmake_minimum_required(VERSION 2.8)
+PROJECT(PATH)
 
-# The name of the project is "PATH".  CMakeLists files in this project can
-# refer to the root source directory of the project as ${PATH_SOURCE_DIR} and
-# to the root binary directory of the project as ${PATH_BINARY_DIR}.
-project (PATH)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-add_subdirectory (Dependencies)
+INCLUDE(CheckIncludeFiles)
+INCLUDE(CheckFunctionExists)
+INCLUDE(CheckTypeSize)
+INCLUDE(CTest)
+INCLUDE(InstallRequiredSystemLibraries)
 
-### C4
-# Make sure the compiler can find include files from the C4 library.
-include_directories (${C4_SOURCE_DIR})
+ENABLE_TESTING()
 
-# Make sure the linker can find the F8 library once it is built.
-link_directories (${C4_BINARY_DIR})
+SET(CPACK_PACKAGE_VERSION_MAJOR "0")
+SET(CPACK_PACKAGE_VERSION_MINOR "1")
+SET(CPACK_PACKAGE_VERSION_PATCH "0")
+SET(CPACK_PACKAGE_VENDOR "Henning Rauch")
+SET(CPACK_RESOURCE_FILE_LICENSE LICENSE.txt)
 
-# Create a library called "PATH" which includes the source file "path.cxx".
-# The extension is already found.  Any number of sources could be listed here.
-add_library (PATH path.cxx)
+INCLUDE(CPack)
 
-target_link_libraries (PATH C4)
+ADD_SUBDIRECTORY(Dependencies)
+ADD_SUBDIRECTORY(src build-src)
+ADD_SUBDIRECTORY(tests build-tests)
+ADD_SUBDIRECTORY(include build-include)
