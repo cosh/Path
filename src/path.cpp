@@ -4,7 +4,7 @@
 
 void Path::Print()
 {
-	KeyKeyValueStore c4;
+	KeyKeyValueStore c4(1);
 	printf("Hello, World! Das ist die erste Ableitung!\n");
 
 }

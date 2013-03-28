@@ -19,12 +19,12 @@ TEST(test_path_basic_2) {
 }
 
 int main() {
-        int err = 0;
+	int err = 0;
 	Path *path;
 
-        test_path_basic_1(path);
+	test_path_basic_1(path);
 	test_path_basic_2(path);
 
-        return err ? -1 : 0;
+	return err ? -1 : 0;
 }
 
