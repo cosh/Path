@@ -1,7 +1,7 @@
 INCLUDE_DIRECTORIES(../include/)
 
 SET(PATH_SRC ${PATH_SRC}
-  path.cxx
+  path.cpp
 )
 
 INCLUDE_DIRECTORIES (${C4_SOURCE_DIR}/include)
