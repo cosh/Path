@@ -23,6 +23,7 @@ ELSE(CPack_CMake_INCLUDED)
 ENDIF(CPack_CMake_INCLUDED)
 
 ADD_SUBDIRECTORY(Dependencies)
+ADD_SUBDIRECTORY(doxygen)
 ADD_SUBDIRECTORY(src build-src)
 ADD_SUBDIRECTORY(tests build-tests)
 ADD_SUBDIRECTORY(include build-include)
