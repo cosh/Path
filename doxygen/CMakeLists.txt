@@ -21,7 +21,7 @@ if(BUILD_DOCUMENTATION)
   configure_file(Doxyfile.in 
                  ${PATH_BINARY_DIR}/doxygen/Doxyfile  @ONLY IMMEDIATE)
   #-- Add a custom target to run Doxygen when ever the project is built
-  add_custom_target (Docs_Path ALL 
+  add_custom_target (Docs_Path 
   	COMMAND ${DOXYGEN_EXECUTABLE} ${PATH_BINARY_DIR}/doxygen/Doxyfile
   	SOURCES ${PATH_BINARY_DIR}/doxygen/Doxyfile)
   # IF you do NOT want the documentation to be generated EVERY time you build the project
