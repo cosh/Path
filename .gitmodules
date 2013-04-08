@@ -1,3 +1,6 @@
 [submodule "Dependencies/C4"]
 	path = Dependencies/C4
 	url = git@github.com:cosh/C4.git
+[submodule "Dependencies/Zeter"]
+	path = Dependencies/Zeter
+	url = git@github.com:cosh/Zeter.git
