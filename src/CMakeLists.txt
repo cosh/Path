@@ -2,6 +2,9 @@ INCLUDE_DIRECTORIES(../include/)
 
 SET(PATH_SRC ${PATH_SRC}
   path.cpp
+  graphElement.cpp
+  vertex.cpp
+  edge.cpp
 )
 
 INCLUDE_DIRECTORIES (${C4_SOURCE_DIR}/include)

@@ -1,5 +1,5 @@
 /*
- * path.cpp
+ * graphElement.cpp
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,13 +24,4 @@
 
  */
 
-#include "path.h"
-#include "KeyKeyValueStore.h"
-#include <stdio.h>
-
-void Path::Print()
-{
-	KeyKeyValueStore c4(1);
-	printf("Hello, World! Das ist die erste Ableitung!\n");
-
-}
+#include "graphElement.h"

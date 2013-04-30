@@ -1,9 +1,9 @@
 /*
- * path.cpp
+ * graphElement.cpp
  *
  *  Created on: 29.04.2013
  *      Author: cosh
- *     Purpose:
+ *     Purpose: This is the header file for the graph element.
  *
  * Copyright (c) 2013 Henning Rauch
  *
@@ -24,13 +24,35 @@
 
  */
 
-#include "path.h"
+#ifndef _graphElement_h
+#define _graphElement_h
+
 #include "KeyKeyValueStore.h"
-#include <stdio.h>
 
-void Path::Print()
-{
-	KeyKeyValueStore c4(1);
-	printf("Hello, World! Das ist die erste Ableitung!\n");
+class GraphElement {
 
-}
+private:
+	const long _id;
+
+	const KeyKeyValueStore * _c4;
+	bool _isDirty;
+
+	const long _creationDate;
+	const unsigned int _modificationDateDifference;
+
+	const int _shortCut;
+	void AddProperty(const short propertyId, const char* value, const int ttl = 0);
+	void RemoveProperty(const short propertyId);
+
+public:
+	const long GetCreationDate();
+	const long GetModificationDate();
+
+	const int GetShortcut();
+
+	const char * const GetProperty(const short propertyId);
+	const int GetPropertyAsInteger(const short propertyId);
+	const double GetPropertyAsDouble(const short propertyId);
+};
+
+#endif

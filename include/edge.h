@@ -1,5 +1,5 @@
 /*
- * path.cpp
+ * edge.h
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,13 +24,17 @@
 
  */
 
-#include "path.h"
-#include "KeyKeyValueStore.h"
-#include <stdio.h>
+#ifndef _edge_h
+#define _edge_h
 
-void Path::Print()
-{
-	KeyKeyValueStore c4(1);
-	printf("Hello, World! Das ist die erste Ableitung!\n");
+#include "graphElement.h"
+#include "vertex.h"
 
-}
+class Edge : public GraphElement {
+
+public:
+	const Vertex * Source;
+	const Vertex * Destination;
+};
+
+#endif

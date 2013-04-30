@@ -1,5 +1,5 @@
 /*
- * path.cpp
+ * vertex.h
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,13 +24,18 @@
 
  */
 
-#include "path.h"
-#include "KeyKeyValueStore.h"
-#include <stdio.h>
+#ifndef _vertex_h
+#define _vertex_h
 
-void Path::Print()
-{
-	KeyKeyValueStore c4(1);
-	printf("Hello, World! Das ist die erste Ableitung!\n");
+#include "graphElement.h"
 
-}
+class Vertex : public GraphElement {
+
+private:
+	void AddEdge();
+
+public:
+	void GetEdge();
+};
+
+#endif
