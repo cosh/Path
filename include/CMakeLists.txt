@@ -1,5 +1,5 @@
 INSTALL(FILES  
-        path.h 
+        pathDb.h 
         DESTINATION include/
         )
 
