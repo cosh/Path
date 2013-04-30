@@ -1,7 +1,7 @@
 INCLUDE_DIRECTORIES(../include/)
 
 SET(PATH_SRC ${PATH_SRC}
-  path.cpp
+  pathDb.cpp
   graphElement.cpp
   vertex.cpp
   edge.cpp

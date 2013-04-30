@@ -1,9 +1,9 @@
 /*
- * path.h
+ * pathDb.h
  *
  *  Created on: 29.04.2013
  *      Author: cosh
- *     Purpose:
+ *     Purpose: The pathDb header file
  *
  * Copyright (c) 2013 Henning Rauch
  *
@@ -24,15 +24,14 @@
 
  */
 
-#ifndef _path_h
-#define _path_h
+#ifndef _pathDb_h
+#define _pathDb_h
 
 
-class Path
+class PathDb
 {
 public:
   void Print();
 };
 
 #endif
-

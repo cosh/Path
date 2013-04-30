@@ -1,9 +1,9 @@
 /*
- * path.cpp
+ * pathDb.cpp
  *
  *  Created on: 29.04.2013
  *      Author: cosh
- *     Purpose:
+ *     Purpose: The pathDB implementation
  *
  * Copyright (c) 2013 Henning Rauch
  *
@@ -28,7 +28,7 @@
 #include "KeyKeyValueStore.h"
 #include <stdio.h>
 
-void Path::Print()
+void PathDb::Print()
 {
 	KeyKeyValueStore c4(1);
 	printf("Hello, World! Das ist die erste Ableitung!\n");
