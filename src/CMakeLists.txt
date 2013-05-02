@@ -1,11 +1,12 @@
 INCLUDE_DIRECTORIES(../include/)
+INCLUDE_DIRECTORIES(../include/model/)
 
 SET(PATH_SRC ${PATH_SRC}
   pathDb.cpp
-  graphElement.cpp
-  edge.cpp
-  vertex.cpp
-  edgeContainer.cpp
+  model/graphElement.cpp
+  model/edge.cpp
+  model/vertex.cpp
+  model/edgeContainer.cpp
 )
 
 INCLUDE_DIRECTORIES (${C4_SOURCE_DIR}/include)
