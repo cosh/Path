@@ -1,5 +1,5 @@
 /*
- * edge.h
+ * edgeContainer.h
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,19 +24,18 @@
 
  */
 
-#ifndef _edge_h
-#define _edge_h
+#ifndef _edgeContainer_h
+#define _edgeContainer_h
 
-#include "graphElement.h"
-#include "vertex.h"
+#include "edge.h"
 
-class Vertex;
+class Edge;
 
-class Edge : public GraphElement {
+class EdgeContainer {
 
 public:
-	const Vertex* const Source;
-	const Vertex* const Destination;
+	const short EdgePropertyId;
+	Edge* Edges;
 };
 
 #endif

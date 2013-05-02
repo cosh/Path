@@ -31,29 +31,33 @@
 #include "edge.h"
 
 class Edge;
+class EdgeContainer;
 
 class Vertex : public GraphElement {
 
 private:
+	const EdgeContainer* const _inEdgeContainer;
+	const EdgeContainer* const _outEdgeContainer;
+
 	void AddEdge();
 	void AddOutEdge(const short edgePropertyId, const Edge * outEdge);
 	void AddInEdge(const short edgePropertyId, const Edge * inEdge);
 
 public:
-	void GetAllEdges();
-	void GetAllOutEdges();
-	void GetAllInEdges();
-	void GetOutEdges(const short edgePropertyId);
-	void GetInEdges(const short edgePropertyId);
+	const Edge* const GetAllEdges();
+	const Edge* const GetAllOutEdges();
+	const Edge* const GetAllInEdges();
+	const Edge* const GetOutEdges(const short edgePropertyId);
+	const Edge* const GetInEdges(const short edgePropertyId);
 
-	void GetAllVertices();
-	void GetAllOutVertices();
-	void GetAllInVertices();
-	void GetOutVertices(const short edgePropertyId);
-	void GetInVertices(const short edgePropertyId);
+	const Vertex* const GetAllNeighbors();
+	const Vertex* const GetAllOutNeighbors();
+	const Vertex* const GetAllInNeighbors();
+	const Vertex* const GetOutNeighbors(const short edgePropertyId);
+	const Vertex* const GetInNeighbors(const short edgePropertyId);
 
-	void GetInEdgeIds();
-	void GetOutEdgeIds();
+	const short* GetInEdgeIds();
+	const short* GetOutEdgeIds();
 
 	unsigned int GetOutDegree();
 	unsigned int GetInDegree();

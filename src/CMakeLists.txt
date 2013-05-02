@@ -5,6 +5,7 @@ SET(PATH_SRC ${PATH_SRC}
   graphElement.cpp
   edge.cpp
   vertex.cpp
+  edgeContainer.cpp
 )
 
 INCLUDE_DIRECTORIES (${C4_SOURCE_DIR}/include)

@@ -1,5 +1,5 @@
 /*
- * vertex.cpp
+ * edgeContainer.cpp
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,5 +24,8 @@
 
  */
 
-#include "vertex.h"
+#include "edgeContainer.h"
 #include "edge.h"
+
+
+

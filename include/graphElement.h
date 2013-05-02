@@ -33,14 +33,13 @@ class GraphElement {
 
 private:
 	const long _id;
+	bool _isDirty;
+	const long _creationDate;
+	unsigned int _modificationDateDifference;
+	int _shortCut;
 
 	const KeyKeyValueStore * _c4;
-	bool _isDirty;
 
-	const long _creationDate;
-	const unsigned int _modificationDateDifference;
-
-	const int _shortCut;
 	void AddProperty(const short propertyId, const char* value, const int ttl = 0);
 	void RemoveProperty(const short propertyId);
 
