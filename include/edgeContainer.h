@@ -33,6 +33,9 @@ class Edge;
 
 class EdgeContainer {
 
+private:
+	int _openEdgeSlots; //if 0, increase edge array
+
 public:
 	const short EdgePropertyId;
 	Edge* Edges;
