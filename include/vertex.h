@@ -28,14 +28,35 @@
 #define _vertex_h
 
 #include "graphElement.h"
+#include "edge.h"
+
+class Edge;
 
 class Vertex : public GraphElement {
 
 private:
 	void AddEdge();
+	void AddOutEdge(const short edgePropertyId, const Edge * outEdge);
+	void AddInEdge(const short edgePropertyId, const Edge * inEdge);
 
 public:
-	void GetEdge();
+	void GetAllEdges();
+	void GetAllOutEdges();
+	void GetAllInEdges();
+	void GetOutEdges(const short edgePropertyId);
+	void GetInEdges(const short edgePropertyId);
+
+	void GetAllVertices();
+	void GetAllOutVertices();
+	void GetAllInVertices();
+	void GetOutVertices(const short edgePropertyId);
+	void GetInVertices(const short edgePropertyId);
+
+	void GetInEdgeIds();
+	void GetOutEdgeIds();
+
+	unsigned int GetOutDegree();
+	unsigned int GetInDegree();
 };
 
 #endif

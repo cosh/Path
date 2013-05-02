@@ -30,6 +30,8 @@
 #include "graphElement.h"
 #include "vertex.h"
 
+class Vertex;
+
 class Edge : public GraphElement {
 
 public:

@@ -25,8 +25,9 @@
  */
 
 #include "vertex.h"
+#include "edge.h"
 
-
+//class Edge;
 
 
 
