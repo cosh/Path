@@ -27,7 +27,7 @@
 #ifndef _pathDb_h
 #define _pathDb_h
 
-#include <KeyKeyValueStore.h>
+template <class T> class KeyKeyValueStore;
 
 template <class T>
 class PathDb
