@@ -27,7 +27,7 @@
 #ifndef _graphElement_h
 #define _graphElement_h
 
-#include "KeyKeyValueStore.h"
+#include "pathDb.h"
 
 template <class T>
 class GraphElement {
@@ -39,9 +39,9 @@ private:
 	unsigned int _modificationDateDifference;
 	int _shortCut;
 
-	const KeyKeyValueStore<T> * _c4;
+	const PathDb<T> * _pathDb;
 
-	void AddProperty(const short propertyId, const char* value, const int ttl = 0);
+	void AddProperty(const short propertyId, const T* value, const int ttl = 0);
 	void RemoveProperty(const short propertyId);
 
 public:
@@ -50,9 +50,7 @@ public:
 
 	const int GetShortcut();
 
-	const char * const GetProperty(const short propertyId);
-	const int GetPropertyAsInteger(const short propertyId);
-	const double GetPropertyAsDouble(const short propertyId);
+	const T * const GetProperty(const short propertyId);
 };
 
 #endif

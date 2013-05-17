@@ -27,9 +27,14 @@
 #ifndef _pathDb_h
 #define _pathDb_h
 
+#include <KeyKeyValueStore.h>
+
 template <class T>
 class PathDb
 {
+private:
+  const KeyKeyValueStore<T> _c4;
+
 public:
   void Print();
 };
