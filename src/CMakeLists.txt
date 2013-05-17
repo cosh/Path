@@ -1,8 +1,12 @@
 INCLUDE_DIRECTORIES(../include/)
 INCLUDE_DIRECTORIES(../include/model/)
+INCLUDE_DIRECTORIES(../include/manager/)
+INCLUDE_DIRECTORIES(../include/helper/)
 
 SET(PATH_SRC ${PATH_SRC}
   pathDb.cpp
+  manager/transactionManager.cpp
+  helper/threadSafeElement.cpp
   model/graphElement.cpp
   model/edge.cpp
   model/vertex.cpp

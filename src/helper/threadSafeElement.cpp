@@ -1,7 +1,7 @@
 /*
- * edge.cpp
+ * threadSafeElement.cpp
  *
- *  Created on: 29.04.2013
+ *  Created on: 17.05.2013
  *      Author: cosh
  *     Purpose:
  * 
@@ -24,10 +24,4 @@
 
  */
 
-#include "edge.h"
-#include "vertex.h"
-
-//class Vertex;
-
-
-
+#include "threadSafeElement.h"

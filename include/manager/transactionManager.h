@@ -1,9 +1,9 @@
 /*
- * pathDb.h
+ * transactionManager.h
  *
- *  Created on: 29.04.2013
+ *  Created on: 17.05.2013
  *      Author: cosh
- *     Purpose: The pathDb header file
+ *     Purpose:
  *
  * Copyright (c) 2013 Henning Rauch
  *
@@ -24,22 +24,13 @@
 
  */
 
-#ifndef _pathDb_h
-#define _pathDb_h
+#ifndef _transactionManager_h
+#define _transactionManager_h
 
-#include "manager/transactionManager.h"
+#include "../helper/threadSafeElement.h"
 
-template <class T> class KeyKeyValueStore;
+class TransactionManager : public ThreadSafeElement {
 
-template <class T>
-class PathDb
-{
-private:
-  const KeyKeyValueStore<T> * _c4;
-  const TransactionManager * _transactionManager;
-
-public:
-  void Print();
 };
 
 #endif

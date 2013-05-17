@@ -1,9 +1,9 @@
 /*
- * pathDb.h
+ * threadSafeElement.h
  *
- *  Created on: 29.04.2013
+ *  Created on: 17.05.2013
  *      Author: cosh
- *     Purpose: The pathDb header file
+ *     Purpose:
  *
  * Copyright (c) 2013 Henning Rauch
  *
@@ -24,22 +24,13 @@
 
  */
 
-#ifndef _pathDb_h
-#define _pathDb_h
+#ifndef _threadSafeElement_h
+#define _threadSafeElement_h
 
-#include "manager/transactionManager.h"
+#include "boost/atomic.hpp"
 
-template <class T> class KeyKeyValueStore;
+class ThreadSafeElement {
 
-template <class T>
-class PathDb
-{
-private:
-  const KeyKeyValueStore<T> * _c4;
-  const TransactionManager * _transactionManager;
-
-public:
-  void Print();
 };
 
 #endif

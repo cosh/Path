@@ -1,5 +1,5 @@
 /*
- * edge.cpp
+ * transactionManager.cpp
  *
  *  Created on: 29.04.2013
  *      Author: cosh
@@ -24,10 +24,5 @@
 
  */
 
-#include "edge.h"
-#include "vertex.h"
-
-//class Vertex;
-
-
+#include "transactionManager.h"
 
