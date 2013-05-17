@@ -33,7 +33,7 @@ template <class T>
 class PathDb
 {
 private:
-  const KeyKeyValueStore<T> _c4;
+  const KeyKeyValueStore<T> * _c4;
 
 public:
   void Print();
