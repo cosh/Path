@@ -28,33 +28,34 @@
 #define _vertex_h
 
 #include "graphElement.h"
-#include "edge.h"
 
-class Edge;
-class EdgeContainer;
+//forward definitions
+template <class T> class Edge;
+template <class T> class EdgeContainer;
 
-class Vertex : public GraphElement {
+template <class T>
+class Vertex : public GraphElement<T> {
 
 private:
-	const EdgeContainer* const _inEdgeContainer;
-	const EdgeContainer* const _outEdgeContainer;
+	const EdgeContainer<T>* const _inEdgeContainer;
+	const EdgeContainer<T>* const _outEdgeContainer;
 
 	void AddEdge();
-	void AddOutEdge(const short edgePropertyId, const Edge * outEdge);
-	void AddInEdge(const short edgePropertyId, const Edge * inEdge);
+	void AddOutEdge(const short edgePropertyId, const Edge<T> * outEdge);
+	void AddInEdge(const short edgePropertyId, const Edge<T> * inEdge);
 
 public:
-	const Edge* const GetAllEdges();
-	const Edge* const GetAllOutEdges();
-	const Edge* const GetAllInEdges();
-	const Edge* const GetOutEdges(const short edgePropertyId);
-	const Edge* const GetInEdges(const short edgePropertyId);
+	const Edge<T>* const GetAllEdges();
+	const Edge<T>* const GetAllOutEdges();
+	const Edge<T>* const GetAllInEdges();
+	const Edge<T>* const GetOutEdges(const short edgePropertyId);
+	const Edge<T>* const GetInEdges(const short edgePropertyId);
 
-	const Vertex* const GetAllNeighbors();
-	const Vertex* const GetAllOutNeighbors();
-	const Vertex* const GetAllInNeighbors();
-	const Vertex* const GetOutNeighbors(const short edgePropertyId);
-	const Vertex* const GetInNeighbors(const short edgePropertyId);
+	const Vertex<T>* const GetAllNeighbors();
+	const Vertex<T>* const GetAllOutNeighbors();
+	const Vertex<T>* const GetAllInNeighbors();
+	const Vertex<T>* const GetOutNeighbors(const short edgePropertyId);
+	const Vertex<T>* const GetInNeighbors(const short edgePropertyId);
 
 	const short* GetInEdgeIds();
 	const short* GetOutEdgeIds();

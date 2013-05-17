@@ -27,10 +27,10 @@
 #ifndef _edgeContainer_h
 #define _edgeContainer_h
 
-#include "edge.h"
+//forward definition
+template <class T> class Edge;
 
-class Edge;
-
+template <class T>
 class EdgeContainer {
 
 private:
@@ -38,7 +38,7 @@ private:
 
 public:
 	const short EdgePropertyId;
-	Edge* Edges;
+	Edge<T>* Edges;
 };
 
 #endif

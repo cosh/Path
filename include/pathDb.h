@@ -27,7 +27,7 @@
 #ifndef _pathDb_h
 #define _pathDb_h
 
-
+template <class T>
 class PathDb
 {
 public:

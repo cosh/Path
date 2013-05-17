@@ -28,9 +28,10 @@
 #include "KeyKeyValueStore.h"
 #include <stdio.h>
 
-void PathDb::Print()
+template <class T>
+void PathDb<T>::Print()
 {
-	KeyKeyValueStore c4(1);
+	KeyKeyValueStore<T> c4(1);
 	printf("Hello, World! Das ist die erste Ableitung!\n");
 
 }

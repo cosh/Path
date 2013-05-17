@@ -28,15 +28,16 @@
 #define _edge_h
 
 #include "graphElement.h"
-#include "vertex.h"
 
+template <class T>
 class Vertex;
 
-class Edge : public GraphElement {
+template <class T>
+class Edge : public GraphElement<T> {
 
 public:
-	const Vertex* const Source;
-	const Vertex* const Destination;
+	const Vertex<T>* const Source;
+	const Vertex<T>* const Destination;
 };
 
 #endif

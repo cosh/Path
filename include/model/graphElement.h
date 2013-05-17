@@ -29,6 +29,7 @@
 
 #include "KeyKeyValueStore.h"
 
+template <class T>
 class GraphElement {
 
 private:
@@ -38,7 +39,7 @@ private:
 	unsigned int _modificationDateDifference;
 	int _shortCut;
 
-	const KeyKeyValueStore * _c4;
+	const KeyKeyValueStore<T> * _c4;
 
 	void AddProperty(const short propertyId, const char* value, const int ttl = 0);
 	void RemoveProperty(const short propertyId);
