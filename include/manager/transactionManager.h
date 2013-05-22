@@ -27,7 +27,7 @@
 #ifndef _transactionManager_h
 #define _transactionManager_h
 
-#include "../helper/threadSafeElement.h"
+#include "threadSafeElement.h"
 
 class TransactionManager : public ThreadSafeElement {
 
