@@ -25,3 +25,53 @@
  */
 
 #include "threadSafeElement.h"
+
+bool ThreadSafeElement::ReadResource() {
+
+
+
+
+	return false;
+
+//	//>=0 indicates that the method is not in use.
+//	if (state_.)
+//	{
+//		//Code to access a resource that is not thread safe would go here.
+//		return true;
+//	}
+//
+//
+//
+//	            //another thread writes something, so lets wait
+//
+//
+//				for (var i = 0; i < int.MaxValue; i++)
+//	            {
+//
+//	                //usingResource was incremented in the if clause, so lets decrement it again
+//
+//	                Interlocked.Decrement(ref _usingResource);
+//
+//
+//
+//	                if (i%10000 == 9999)
+//	                {
+//	                    Thread.Sleep(1);
+//	                }
+//
+//
+//
+//	                if (Interlocked.Increment(ref _usingResource) > 0)
+//
+//	                {
+//
+//	                    return true;
+//
+//	                }
+//
+//	            }
+//
+//
+//
+//	            return false;
+}

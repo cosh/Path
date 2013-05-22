@@ -27,10 +27,23 @@
 #ifndef _threadSafeElement_h
 #define _threadSafeElement_h
 
-#include "boost/atomic.hpp"
+#include <atomic>
 
 class ThreadSafeElement {
 
+private:
+	typedef enum {Read, Write} LockState;
+	LockState _state;
+	std::atomic<int> _readerCount;
+
+public:
+	ThreadSafeElement() : _state(Read), _readerCount(0) {}
+
+	bool ReadResource();
+	void FinishReadResource ();
+
+	bool WriteResource();
+	void FinishWriteResource ();
 };
 
 #endif
