@@ -28,9 +28,10 @@
 #define _edgeContainer_h
 
 //forward definition
-template <class T> class Edge;
+template <class TProperty, class TShortCut>
+class Edge;
 
-template <class T>
+template <class TProperty, class TShortCut>
 class EdgeContainer {
 
 private:
@@ -38,7 +39,7 @@ private:
 
 public:
 	const short EdgePropertyId;
-	Edge<T>* Edges;
+	Edge<TProperty, TShortCut>* Edges;
 };
 
 #endif

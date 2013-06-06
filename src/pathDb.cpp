@@ -28,10 +28,9 @@
 #include "KeyKeyValueStore.h"
 #include <stdio.h>
 
-template <class T>
-void PathDb<T>::Print()
+template <class TProperty, class TShortCut>
+void PathDb<TProperty, TShortCut>::Print()
 {
-	KeyKeyValueStore<T> c4(1);
 	printf("Hello, World! Das ist die erste Ableitung!\n");
 
 }

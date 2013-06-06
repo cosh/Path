@@ -29,15 +29,15 @@
 
 #include "graphElement.h"
 
-template <class T>
+template <class TProperty, class TShortCut>
 class Vertex;
 
-template <class T>
-class Edge : public GraphElement<T> {
+template <class TProperty, class TShortCut>
+class Edge : public GraphElement<TProperty, TShortCut> {
 
 public:
-	const Vertex<T>* const Source;
-	const Vertex<T>* const Destination;
+	const Vertex<TProperty, TShortCut>* const Source;
+	const Vertex<TProperty, TShortCut>* const Destination;
 };
 
 #endif

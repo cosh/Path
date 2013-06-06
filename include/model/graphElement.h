@@ -29,7 +29,7 @@
 
 #include "pathDb.h"
 
-template <class T>
+template <class TProperty, class TShortCut>
 class GraphElement {
 
 private:
@@ -37,20 +37,20 @@ private:
 	bool _isDirty;
 	const long _creationDate;
 	unsigned int _modificationDateDifference;
-	int _shortCut;
+	TShortCut _shortCut;
 
-	const PathDb<T> * _pathDb;
+	const PathDb<TProperty, TShortCut> * _pathDb;
 
-	void AddProperty(const short propertyId, const T* value, const int ttl = 0);
+	void AddProperty(const short propertyId, TProperty* const value, const int ttl = 0);
 	void RemoveProperty(const short propertyId);
 
 public:
 	const long GetCreationDate();
 	const long GetModificationDate();
 
-	const int GetShortcut();
+	const TShortCut GetShortcut();
 
-	const T * const GetProperty(const short propertyId);
+	const TProperty * const GetProperty(const short propertyId);
 };
 
 #endif

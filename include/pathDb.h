@@ -29,17 +29,19 @@
 
 #include "manager/transactionManager.h"
 
-template <class T> class KeyKeyValueStore;
+template <class TProperties> class KeyKeyValueStore;
 
-template <class T>
+template <class TProperty, class TShortCut>
 class PathDb
 {
 private:
-  const KeyKeyValueStore<T> * _c4;
-  const TransactionManager * _transactionManager;
+  KeyKeyValueStore<TProperty> * const _c4;
+  TransactionManager * const _transactionManager;
 
 public:
   void Print();
+
+
 };
 
 #endif
