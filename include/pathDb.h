@@ -28,20 +28,24 @@
 #define _pathDb_h
 
 #include "manager/transactionManager.h"
+#include "KeyKeyValueStore.h"
 
-template <class TProperties> class KeyKeyValueStore;
+template<class TProperties> class KeyKeyValueStore;
 
-template <class TProperty, class TShortCut>
-class PathDb
-{
+template<class TProperty, class TShortCut>
+class PathDb {
 private:
-  KeyKeyValueStore<TProperty> * const _c4;
-  TransactionManager * const _transactionManager;
+	KeyKeyValueStore<TProperty>* _c4;
+	TransactionManager* _transactionManager;
 
 public:
-  void Print();
+	void Print();
 
-
+	explicit PathDb()
+	{
+		_c4 = new KeyKeyValueStore<TProperty>(2);
+		_transactionManager = new TransactionManager();
+	}
 };
 
 #endif

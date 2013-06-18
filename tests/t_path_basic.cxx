@@ -4,7 +4,8 @@
 #include <string.h>
 #include <errno.h>
 #include "path_tests.h"
-#include "path.h"
+#include "pathDb.h"
+#include <boost/any.hpp>
 
 TEST(test_path_basic_1) {
 	assert(1 > 0);
@@ -20,10 +21,10 @@ TEST(test_path_basic_2) {
 
 int main() {
 	int err = 0;
-	Path *path;
+	PathDb<boost::any, boost::any> *pathDb = new PathDb<boost::any, boost::any>();
 
-	test_path_basic_1(path);
-	test_path_basic_2(path);
+	test_path_basic_1(pathDb);
+	test_path_basic_2(pathDb);
 
 	return err ? -1 : 0;
 }
