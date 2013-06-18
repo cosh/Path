@@ -21,7 +21,7 @@ TEST(test_path_basic_2) {
 
 int main() {
 	int err = 0;
-	PathDb<boost::any, boost::any> *pathDb = new PathDb<boost::any, boost::any>();
+	PathDb<boost::any, boost::any> *pathDb = new PathDb<boost::any, boost::any>(1000);
 
 	test_path_basic_1(pathDb);
 	test_path_basic_2(pathDb);

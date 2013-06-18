@@ -41,9 +41,9 @@ private:
 public:
 	void Print();
 
-	explicit PathDb()
+	explicit PathDb(int compactionInterval)
 	{
-		_c4 = new KeyKeyValueStore<TProperty>(2);
+		_c4 = new KeyKeyValueStore<TProperty>(compactionInterval);
 		_transactionManager = new TransactionManager();
 	}
 };
