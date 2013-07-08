@@ -27,10 +27,7 @@
 #ifndef _transactionManager_h
 #define _transactionManager_h
 
-//#include "threadSafeElement.h"
-#include "../../Dependencies/C4/Dependencies/Zeter/include/threadSafeElement.h"
-
-class TransactionManager : public ThreadSafeElement {
+class TransactionManager{
 
 };
 
