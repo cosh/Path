@@ -28,18 +28,18 @@
 #define _edgeContainer_h
 
 //forward definition
-template <class TProperty, class TShortCut>
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut>
 class Edge;
 
-template <class TProperty, class TShortCut>
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut>
 class EdgeContainer {
 
 private:
 	int _openEdgeSlots; //if 0, increase edge array
 
 public:
-	const short EdgePropertyId;
-	Edge<TProperty, TShortCut>* Edges;
+	const TPropertyId EdgePropertyId;
+	Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* Edges;
 };
 
 #endif

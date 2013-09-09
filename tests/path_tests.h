@@ -1,1 +1,1 @@
-#define TEST(name) static int name(PathDb<boost::any, boost::any> *pathDb)
+#define TEST(name) static int name(PathDb<boost::any, long, short, boost::any> *pathDb)

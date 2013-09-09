@@ -28,9 +28,6 @@
 #include "KeyKeyValueStore.h"
 #include <stdio.h>
 
-template <class TProperty, class TShortCut>
-void PathDb<TProperty, TShortCut>::Print()
-{
-	printf("Hello, World! Das ist die erste Ableitung!\n");
-
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut>
+inline void PathDb<TValue, TGraphElementId, TPropertyId, TShortCut>::Print() {
 }

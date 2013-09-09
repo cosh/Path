@@ -28,14 +28,14 @@
 #define _pathDb_h
 
 #include "manager/transactionManager.h"
-#include "KeyKeyValueStore.h"
+#include "C4.h"
 
-template<class TProperties> class KeyKeyValueStore;
+template<class TValue, class TRowId, class TColumnId> class C4;
 
-template<class TProperty, class TShortCut>
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut>
 class PathDb {
 private:
-	KeyKeyValueStore<TProperty>* _c4;
+	C4<TValue, TGraphElementId, TPropertyId>* _c4;
 	TransactionManager* _transactionManager;
 
 public:
@@ -43,7 +43,7 @@ public:
 
 	explicit PathDb(int compactionInterval)
 	{
-		_c4 = new KeyKeyValueStore<TProperty>(compactionInterval);
+		_c4 = new C4<TValue, TGraphElementId, TPropertyId>(compactionInterval);
 		_transactionManager = new TransactionManager();
 	}
 };

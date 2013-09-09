@@ -30,35 +30,35 @@
 #include "graphElement.h"
 
 //forward definitions
-template <class TProperty, class TShortCut> class Edge;
-template <class TProperty, class TShortCut> class EdgeContainer;
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut> class Edge;
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut> class EdgeContainer;
 
-template <class TProperty, class TShortCut>
-class Vertex : public GraphElement<TProperty, TShortCut> {
+template<class TValue, class TGraphElementId, class TPropertyId, class TShortCut>
+class Vertex : public GraphElement<TValue, TGraphElementId, TPropertyId, TShortCut> {
 
 private:
-	const EdgeContainer<TProperty, TShortCut>* const _inEdgeContainer;
-	const EdgeContainer<TProperty, TShortCut>* const _outEdgeContainer;
+	const EdgeContainer<TValue, TGraphElementId, TPropertyId, TShortCut>* const _inEdgeContainer;
+	const EdgeContainer<TValue, TGraphElementId, TPropertyId, TShortCut>* const _outEdgeContainer;
 
 	void AddEdge();
-	void AddOutEdge(const short edgePropertyId, Edge<TProperty, TShortCut> * const outEdge);
-	void AddInEdge(const short edgePropertyId, Edge<TProperty, TShortCut> * const inEdge);
+	void AddOutEdge(const TPropertyId edgePropertyId, Edge<TValue, TGraphElementId, TPropertyId, TShortCut> * const outEdge);
+	void AddInEdge(const TPropertyId edgePropertyId, Edge<TValue, TGraphElementId, TPropertyId, TShortCut> * const inEdge);
 
 public:
-	const Edge<TProperty, TShortCut>* const GetAllEdges();
-	const Edge<TProperty, TShortCut>* const GetAllOutEdges();
-	const Edge<TProperty, TShortCut>* const GetAllInEdges();
-	const Edge<TProperty, TShortCut>* const GetOutEdges(const short edgePropertyId);
-	const Edge<TProperty, TShortCut>* const GetInEdges(const short edgePropertyId);
+	const Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllEdges();
+	const Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllOutEdges();
+	const Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllInEdges();
+	const Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetOutEdges(const TPropertyId edgePropertyId);
+	const Edge<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetInEdges(const TPropertyId edgePropertyId);
 
-	const Vertex<TProperty, TShortCut>* const GetAllNeighbors();
-	const Vertex<TProperty, TShortCut>* const GetAllOutNeighbors();
-	const Vertex<TProperty, TShortCut>* const GetAllInNeighbors();
-	const Vertex<TProperty, TShortCut>* const GetOutNeighbors(const short edgePropertyId);
-	const Vertex<TProperty, TShortCut>* const GetInNeighbors(const short edgePropertyId);
+	const Vertex<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllNeighbors();
+	const Vertex<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllOutNeighbors();
+	const Vertex<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetAllInNeighbors();
+	const Vertex<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetOutNeighbors(const TPropertyId edgePropertyId);
+	const Vertex<TValue, TGraphElementId, TPropertyId, TShortCut>* const GetInNeighbors(const TPropertyId edgePropertyId);
 
-	const short* GetInEdgeIds();
-	const short* GetOutEdgeIds();
+	const TPropertyId* GetInEdgeIds();
+	const TPropertyId* GetOutEdgeIds();
 
 	unsigned int GetOutDegree();
 	unsigned int GetInDegree();
