@@ -25,3 +25,4 @@ Testing/*
 build-tests/*
 doc/*
 doxygen/Doxyfile
+Dependencies/Testing/*
